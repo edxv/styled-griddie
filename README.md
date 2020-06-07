@@ -1,6 +1,6 @@
 # Griddie for Styled Components
 
-Automatically adds prefixes for IE11 to CSS Grid properties in [Styled Components](https://github.com/styled-components/styled-components).
+Automatically adds IE11 prefixes to CSS Grid properties in [Styled Components](https://github.com/styled-components/styled-components).
 
 ## Usage
 
