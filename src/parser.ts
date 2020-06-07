@@ -1,6 +1,6 @@
-import { axisShorthand } from './properties/axisShorthand'
-import { templateAxis } from './properties/templateAxis'
-import { templateShorthand } from './properties/templateShorthand'
+import { axisShorthand } from './properties/axisShorthand/axisShorthand'
+import { templateAxis } from './properties/templateAxis/templateAxis'
+import { templateShorthand } from './properties/templateShorthand/templateShorthand'
 import { StylisPlugin } from 'styled-components'
 
 export type GriddieFunction = (property: string) => ReturnType<StylisPlugin>
