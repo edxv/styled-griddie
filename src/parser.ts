@@ -1,30 +1,28 @@
 import { axisShorthand } from './properties/axisShorthand'
-import { axisStart } from './properties/axisStart'
-import { axisEnd } from './properties/axisEnd'
 import { templateAxis } from './properties/templateAxis'
 import { templateShorthand } from './properties/templateShorthand'
-import { StylisPlugin } from './index'
+import { StylisPlugin } from 'styled-components'
 
-export type GriddieFunction = (content: string) => ReturnType<StylisPlugin>
+export type GriddieFunction = (property: string) => ReturnType<StylisPlugin>
 
 export type GridPropertiesObject = {
   [key: string]: string
 }
 
-export const parseGridProperties: GriddieFunction = content => {
-  if (!content.includes('grid')) {
-    return content
+export const parseGridProperties: GriddieFunction = property => {
+  if (!property.includes('grid')) {
+    return property
   }
 
   // display property
-  if (content === 'display:grid') {
+  if (property === 'display:grid') {
     return `
       display: -ms-grid;
       display: grid;
     `
   }
 
-  if (content === 'display:inline-grid') {
+  if (property === 'display:inline-grid') {
     return `
       display: -ms-inline-grid;
       display: inline-grid;
@@ -33,18 +31,13 @@ export const parseGridProperties: GriddieFunction = content => {
 
   // check if grid- property
   const gridPropertyRegex = /^grid-([a-z-]+): *(.+)/
-  const isGridProperty = content.match(gridPropertyRegex)
+  const isGridProperty = property.match(gridPropertyRegex)
 
   if (!isGridProperty) {
-    return content
+    return property
   }
 
   const [, name, value] = isGridProperty
-
-  // all grid properties in this context (e.g. in this CSS selector)
-  const allGridProperties: GridPropertiesObject = {
-    [name]: value
-  }
 
   // grid-template
   if (name === 'template') {
@@ -61,15 +54,5 @@ export const parseGridProperties: GriddieFunction = content => {
     return axisShorthand(name, value)
   }
 
-  // grid-row-start or grid-column-start
-  if (name === 'row-start' || name === 'column-start') {
-    return axisStart(name, value)
-  }
-
-  // grid-row-end or grid-column-end
-  if (name === 'row-end' || name === 'column-end') {
-    return axisEnd(name, value, allGridProperties)
-  }
-
-  return content
+  return property
 }

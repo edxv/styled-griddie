@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -23,7 +23,7 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "name": "griddie",
+  "name": "styled-griddie",
   "author": "Ed Stephens",
   "module": "dist/griddie.esm.js",
   "devDependencies": {
