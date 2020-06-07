@@ -12,8 +12,8 @@ Automatically adds prefixes for IE11 to CSS Grid properties in [Styled Component
 
 ```tsx
 import React from 'react'
-import { StyleSheetManager } from 'styled-components'
 import { Styled } from './styles'
+import { StyleSheetManager } from 'styled-components'
 import griddie from 'styled-griddie'
 
 const App = () => {
