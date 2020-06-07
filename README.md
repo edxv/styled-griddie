@@ -10,7 +10,7 @@ Automatically adds prefixes for IE10, IE11, and Edge to CSS Grid properties in [
 
 ## Example
 
-```
+```tsx
 import React from 'react'
 import { Styled } from './styles'
 import griddie from 'styled-griddie'
