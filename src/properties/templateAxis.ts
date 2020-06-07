@@ -7,6 +7,6 @@ export const templateAxis = (name: string, value: string) => {
 
   return `
     -ms-grid-${axis}: ${msValue};
-    ${name}: ${value};
+    grid-${name}: ${value};
   `
 }
