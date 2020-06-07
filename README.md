@@ -1,6 +1,6 @@
 # Griddie for Styled Components
 
-Automatically adds prefixes for IE10, IE11, and Edge to CSS Grid properties in [Styled Components](https://github.com/styled-components/styled-components).
+Automatically adds prefixes for IE11 to CSS Grid properties in [Styled Components](https://github.com/styled-components/styled-components).
 
 ## Usage
 
@@ -33,7 +33,7 @@ export default App
 | Property                | Supported? | Notes                             |
 | ----------------------- | ---------- | --------------------------------- |
 | `display`               | ✅         | Supports `grid` and `inline-grid` |
-| `grid-template`         | ✅         |
+| `grid-template`         | ✅         | Supports `repeat()` function      |
 | `grid-template-rows`    | ✅         |
 | `grid-template-columns` | ✅         |
 | `grid-row`              | ✅         | See limitation #1, #2, #3 below.  |
