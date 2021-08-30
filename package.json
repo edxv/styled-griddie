@@ -25,7 +25,7 @@
   },
   "name": "styled-griddie",
   "author": "Ed Stephens",
-  "module": "dist/griddie.esm.js",
+  "module": "dist/styled-griddie.esm.js",
   "devDependencies": {
     "@testing-library/react": "^10.2.1",
     "@types/react-test-renderer": "^16.9.2",
